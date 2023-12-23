@@ -1,121 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
 body {
-    background: #000
-}
-
-.hide {
-    display: none !important;
-}
-
-.container {
-    width: 1140px;
-    margin: 0 auto;
-}
-
-.header {
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
+    min-height: 100vh;
+    background: url(img/spiral-purpur-3840x2160.jpg) no-repeat;
+    /* backdrop-filter: blur(5px); */
+    background-size: cover;
+    background-position: center;
 }
 
-.header__logo {
-    font-size: 20px;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #0f0;
-    margin: 0;
-    font-size: 40px;
-}
-
-.header__menu {
-    position: relative;
-}
-
-.header__menu .menu__btn {
+.wrapper {
+    width: 420px;
     background: transparent;
-    border: none;
-    cursor: pointer;
-    color: #0f0;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
 }
 
-.header__menu .menu__btn svg {
-    width: 25px;
-    height: 25px;
+.wrapper h1 {
+    font-size: 36px;
+    text-align: center;
 }
 
-.header__menu .menu__list {
-    margin: 0;
-    padding: 10px 20px;
-    list-style-type: none;
-    border-radius: 4px;
-    background: #000;
+.wrapper .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    outline: none;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+    color: #fff;
+}
+
+.input-box i {
     position: absolute;
-    bottom: 0;
-    right: 0;
-    transform: translateY(100%);
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    animation: menu-showing 0.3s;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
 }
 
-.header__menu .menu__link {
-    font-size: 14px;
-    line-height: 16px;
-    color: #00ff00;
+.wrapper .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px 0;
+}
+
+.remember-forgot label input {
+    accent-color: #fff;
+    margin-right: 3px;
+}
+
+.remember-forgot a {
+    color: #fff;
     text-decoration: none;
 }
 
-@keyframes menu-showing {
-    from {
-        transform: translateY(95%);
-    }
+.remember-forgot a:hover {
+    text-decoration: underline;
 }
 
-/* Прописать стили для блока info и portifolio нужно самостоятельно */
-.info {
-    color: #0f0;
-    margin: 0 0 20px 0;
-}
-
-.info__title {
-    margin: 0 0 10px 0;
-}
-
-.info__fullname {
-    margin: 0 0 5px 0;
-}
-
-.info__telega {
-    display: block;
-    margin: 0 0 5px 0;
-    color: #0f0;
-}
-
-.info__github {
-    display: block;
-    margin: 0;
-    color: #0f0;
-}
-
-.portfolio {
-    display: block;
-    align-items: center;
-    margin: 0;
-}
-
-.portfolio__btn {
-    background: #000;
-    border: none;
+.wrapper .btn {
+    width: 100%;
+    height: 45px;
+    background:  #fff;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
     cursor: pointer;
-    color: #0f0;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
 }
 
-.portfolio__list {
-    margin: 0;
-    padding: 10px 20px;
-    list-style-type: armenian;
-    border-radius: 4px;
-    background: #000;
+.btn:hover {
+    background: transparent;
+    color: #fff;
+}
+
+.wrapper .register-link {
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px 0;
+}
+
+.register-link p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link p a:hover {
+    text-decoration: underline;
 }
