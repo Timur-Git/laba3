@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -12,111 +12,138 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url(img/spiral-purpur-3840x2160.jpg) no-repeat;
-    /* backdrop-filter: blur(5px); */
+    background: url(img/geometriya-purpur-3840x2160.jpg);
     background-size: cover;
     background-position: center;
 }
 
 .wrapper {
-    width: 420px;
-    background: transparent;
-    border: 2px solid rgba(255, 255, 255, .2);
-    backdrop-filter: blur(20px);
-    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
-    color: #fff;
-    border-radius: 10px;
-    padding: 30px 40px;
-}
-
-.wrapper h1 {
-    font-size: 36px;
-    text-align: center;
-}
-
-.wrapper .input-box {
     position: relative;
-    width: 100%;
-    height: 50px;
-    margin: 30px 0;
+    width: 400px;
+    height: 500px;
+    background: #000;
+    box-shadow: 0 0 50px #0ef;
+    border-radius: 20px;
+    padding: 40px;
+    overflow: hidden;
 }
 
-.input-box input {
+.wrapper:hover {
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.from-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
-    background: transparent;
-    border: 2px solid rgba(255, 255, 255, .2);
-    outline: none;
-    border-radius: 40px;
-    font-size: 16px;
-    color: #fff;
-    padding: 20px 45px 20px 20px;
+    transition: 1s ease-in-out;
 }
 
-.input-box input::placeholder {
-    color: #fff;
+.wrapper.active .from-wrapper.sign-in {
+    transform: translateY(-450px);
 }
 
-.input-box i {
+.wrapper .from-wrapper.sign-up {
     position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 20px;
+    top: 450px;
+    left: 0;
 }
 
-.wrapper .remember-forgot {
-    display: flex;
-    justify-content: space-between;
-    font-size: 14.5px;
-    margin: -15px 0 15px 0;
+.wrapper.active .from-wrapper.sign-up {
+    transform: translateY(-450px)
 }
 
-.remember-forgot label input {
-    accent-color: #fff;
-    margin-right: 3px;
-}
-
-.remember-forgot a {
+h2 {
+    font-size: 30px;
     color: #fff;
-    text-decoration: none;
-}
-
-.remember-forgot a:hover {
-    text-decoration: underline;
-}
-
-.wrapper .btn {
-    width: 100%;
-    height: 45px;
-    background:  #fff;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    outline: none;
-    border-radius: 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
-    cursor: pointer;
-    font-size: 16px;
-    color: #333;
-    font-weight: 600;
-}
-
-.btn:hover {
-    background: transparent;
-    color: #fff;
-}
-
-.wrapper .register-link {
-    font-size: 14.5px;
     text-align: center;
-    margin: 20px 0 15px 0;
 }
 
-.register-link p a {
+.input-group {
+    position: relative;
+    margin: 30px 0;
+    border-bottom: 2px solid #fff;
+}
+
+.input-group label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 16px;
     color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-group input {
+    width: 320px;
+    height: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 0 5px;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.input-group input:focus~label,
+.input-group input:valid~label {
+    top: -5px;
+}
+
+.remember {
+    margin: -5px 0 15px 5px;
+}
+
+.remember label {
+    color: #fff;
+    font-size: 14px;
+}
+
+.remember label input {
+    accent-color: #0ef;
+}
+
+button {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background: #0ef;
+    box-shadow: 0 0 10px #0ef;
+    font-size: 16px;
+    color: #000;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+}
+
+.signUp_signIn-link {
+    font-size: 14px;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.signUp_signIn-link p {
+    color: #fff;
+}
+
+.signUp_signIn-link p a {
+    color: #0ef;
     text-decoration: none;
     font-weight: 600;
 }
 
-.register-link p a:hover {
+.signUp_signIn-link p a:hover {
     text-decoration: underline;
 }

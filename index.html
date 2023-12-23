@@ -5,36 +5,77 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="style.css" />
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="shortcut icon" href="icon/eva.png" type="image/png">
     <title>EVA</title>
 </head>
 
 <body>
     <div class="wrapper">
-        <form action="">
-            <h1>Login</h1>
-            <div class="input-box">
-                <input type="text" placeholder="Username" required>
-                <i class='bx bxs-user'></i>
-            </div>
-            <div class="input-box">
-                <input type="password" placeholder="Password" required>
-                <i class='bx bxs-lock-alt'></i>
-            </div>
+        <div class="from-wrapper sign-in">
+            <form action="">
 
-            <div class="remember-forgot">
-                <label><input type="checkbox">Remember me</label>
-                <a href="#">Forgot password?</a>
-            </div>
+                <h2>Login</h2>
 
-            <button type="submit" class="btn">Login</button>
+                <div class="input-group">
+                    <input type="text" required>
+                    <label for="">Username</label>
+                </div>
 
-            <div class="register-link">
-                <p>Don't have an account? <a href="#">Register</a></p>
-            </div>
-        </form>
+                <div class="input-group">
+                    <input type="password" required>
+                    <label for="">Password</label>
+                </div>
+
+                <div class="remember">
+                    <label><input type="checkbox"> Remember me</label>
+                </div>
+
+                <button type="submit">Login</button>
+
+                <div class="signUp_signIn-link">
+                    <p>Don't have an account? 
+                        <a href="#" class="signUpBtn-link">Sign Up</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+
+        <div class="from-wrapper sign-up">
+            <form action="">
+
+                <h2>Sign Up</h2>
+
+                <div class="input-group">
+                    <input type="text" required>
+                    <label for="">Username</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="email" required>
+                    <label for="">Email</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="password" required>
+                    <label for="">Password</label>
+                </div>
+
+                <div class="remember">
+                    <label><input type="checkbox"> I agree to the terms & conditions</label>
+                </div>
+
+                <button type="submit">Sign Up</button>
+
+                <div class="signUp_signIn-link">
+                    <p>Already have an account? 
+                        <a href="#" class="signInBtn-link">Sign In</a>
+                    </p>
+                </div>
+            </form>
+        </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
