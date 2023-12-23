@@ -12,7 +12,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url(spiral-purpur-3840x2160.jpg) no-repeat;
+    background: url(img/spiral-purpur-3840x2160.jpg) no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -68,7 +68,6 @@ body {
 .wrapper .remember-forgot {
     display: flex;
     justify-content: space-between;
-    /* хочу сдесь сделать немного подругому русположение надписей */
     font-size: 14.5px;
     margin: -15px 0 15px 0;
 }
